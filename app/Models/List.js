@@ -10,7 +10,7 @@ export default class List {
     get Template() {
 
         return /*html*/`
-        <div class="col-4 border rounded">
+        <div class="col-4 border rounded bg-primary">
             <h1>${this.title}<button class="text close"
             onclick="app.listController.delete('${this.id}')"><span>&times;</span></button> </h1>
             <h5>Tasks</h5>

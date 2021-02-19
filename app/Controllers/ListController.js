@@ -26,6 +26,10 @@ export default class ListController {
     listService.create(rawList)
   }
 
+  delete(listId){
+      listService.delete(listId)
+  }
+
 
   addValue() {
     listService.addValue()

@@ -12,6 +12,10 @@ create(rawList){
     ProxyState.list = [new List(rawList), ...ProxyState.list]
 }
 
+delete (listId){
+    ProxyState.list = ProxyState.list.filter(l => l.id != listId)
+}
+
 }
 
 
