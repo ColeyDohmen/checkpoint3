@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
-    <title>checkpoint3</title>
+    <title>Checkpoint3</title>
 </head>
 
 <body>
@@ -16,12 +16,27 @@
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">checkpoint3</span>
+                <span class="ml-2">Task Master</span>
             </a>
         </nav>
     </header>
     <main>
-        <div id="app"></div>
+        <div id="app" class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
+                    <form onsubmit="app.listController.create(event)">
+                        <div class="form-group">
+                            <input type="text" name="title" placeholder="Enter new task...">
+                            <button class="btn-primary" type="submit">Create Task</button>
+                        </div>
+                    </form>
+                    <div class="row" id="list">
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
