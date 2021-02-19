@@ -10,14 +10,14 @@ export default class List {
     get Template() {
 
         return /*html*/`
-        <div class="col-4 border rounded bg-primary">
-            <h1>${this.title}<button class="text close"
-            onclick="app.listController.delete('${this.id}')"><span>&times;</span></button> </h1>
+        <div class="col-3 border rounded bg-primary shadow-lg">
+            <h2>${this.title}<button class="text close"
+            onclick="app.listController.delete('${this.id}')"><span>&times;</span></button> </h2>
             <h5>Tasks</h5>
-            <form onsubmit="app.listController.create(event, '${this.id}')">
+            <form onsubmit="app.taskController.create(event, '${this.id}')">
                 <div class="form-group">
                     <input type="text" name="title" placeholder="Enter new task...">
-                    <button type="submit">Add Task</button>
+                    <button type="submit" class="btn-info">Add Task</button>
                     <div class="row">
                     
                     </div>

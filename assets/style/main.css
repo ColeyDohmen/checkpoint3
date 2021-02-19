@@ -36,6 +36,12 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.btn-custom{
+  height: 3rem;
+  width: 8rem;
+}
+
+
 *,
 *::before,
 *::after {
