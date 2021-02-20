@@ -17,7 +17,11 @@ create(rawList){
 }
 
 delete (listId){
-    ProxyState.list = ProxyState.list.filter(l => l.id != listId)
+    if (window.confirm("But are you sure?")){
+        console.log(`test`);
+        ProxyState.list = ProxyState.list.filter(l => l.id != listId)
+    }
+    console.log(`other`);
 }
 
 }

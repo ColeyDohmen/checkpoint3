@@ -15,6 +15,7 @@ export default class ListController {
   constructor() {
       console.log(`controller`);
     ProxyState.on("list", _draw);
+    ProxyState.on("task", _draw);
     _draw()
   }
   create (event){

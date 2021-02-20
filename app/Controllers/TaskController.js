@@ -1,29 +1,37 @@
 import { ProxyState } from "../AppState.js";
-import { listService } from "../Services/ListService.js";
+import { taskService } from "../Services/TaskService.js";
 
 
 //Private
-function _draw() {
-  let values = ProxyState.values;
-  let template = ''
-  values.forEach(v => template += v.Template)
-  document.getElementById("app").innerHTML = /*html*/`
-  <button className="btn btn-info" onclick="app.valuesController.addValue()">Add Value</button>  
-  <div className="card-columns values">
-      ${template}
-  </div>
-  `
-}
+// function _draw() {
+
+//         let taskElem = document.getElementById("list")
+//         let template = ""
+//         ProxyState.task.forEach(t => template += t.Template)
+//         taskElem.innerHTML = template
+//     }
+
+
 
 //Public
 export default class TaskController {
-  constructor() {
-    ProxyState.on("values", _draw);
-    _draw()
-  }
+    constructor() {
+        console.log(`controller`);
+    
+    }
+    create (event, listId){
+        event.preventDefault()
+      let form = event.target 
+      let rawTask = {
+          title: form.title.value,
+          listId: listId
+      }
+      taskService.create(rawTask)
+    }
+  
+    delete(taskId){
+        taskService.delete(taskId)
+    }
 
-  addValue() {
-    listService.addValue()
-  }
 
 }
