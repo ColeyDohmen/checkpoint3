@@ -25,11 +25,12 @@
 
             <div class="row">
                 <div class="col-12">
-                    <form onsubmit="app.listController.create(event)">
+                    <form onsubmit="app.listController.create(event)" autocomplete="off">
                         <div class="form-group">
-                            <input type="text" class="mt-3" style="height: 3rem;" name="title"
-                                placeholder="Start new list...">
+                            <input type="text" class="mt-3" style="height: 3rem;" name="title" required minlength="3"
+                                maxlength="15" placeholder="Start new list...">
                             <button class="btn-primary btn-custom" type="submit">Create List</button>
+                            <input type="color" name="color" style="height: 3rem; top:1rem;" class="position-absolute">
                         </div>
                     </form>
                     <div class="row" id="list">

@@ -22,18 +22,21 @@ export default class ListController {
       event.preventDefault()
     let form = event.target 
     let rawList = {
-        title: form.title.value 
+        title: form.title.value,
+        color: form.color.value
     }
     listService.create(rawList)
+    form.reset()
   }
+
 
   delete(listId){
       listService.delete(listId)
   }
 
 
-  addValue() {
-    listService.addValue()
-  }
+  // addValue() {
+  //   listService.addValue()
+  // }
 
 }

@@ -11,10 +11,25 @@ class TaskService {
 constructor() {
     console.log(`service`);
     ProxyState.on(`task`, saveState)
+    
 }
 
 delete (taskId){
     ProxyState.task = ProxyState.task.filter(t => t.id != taskId)
+}
+
+checkMark(taskId){
+    let CheckedTask = ProxyState.task.find(t => t.id == taskId)
+
+    if (CheckedTask.checked == true){
+        CheckedTask.checked = false
+    }
+    else if (CheckedTask.checked == false){
+        CheckedTask.checked = true
+    }
+    
+    ProxyState.task = ProxyState.task 
+    console.log(`checked`);
 }
 
 }

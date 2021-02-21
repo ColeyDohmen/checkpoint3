@@ -33,5 +33,9 @@ export default class TaskController {
         taskService.delete(taskId)
     }
 
+    checkMark(taskId){
+        taskService.checkMark(taskId)
+    }
+
 
 }
