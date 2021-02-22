@@ -15,7 +15,8 @@ constructor() {
 }
 
 delete (taskId){
-    ProxyState.task = ProxyState.task.filter(t => t.id != taskId)
+    if (window.confirm("But are you REALLY sure?")){
+    ProxyState.task = ProxyState.task.filter(t => t.id != taskId)}
 }
 
 checkMark(taskId){
